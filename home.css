@@ -1,0 +1,380 @@
+/* Reset and base styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: black;
+    font-family: 'Montserrat', sans-serif;
+    overflow: hidden;
+}
+
+/* Header */
+.head {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 60px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+    z-index: 10;
+}
+
+/* Footer */
+.foot {
+    background-color: green;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 10;
+    display: none;
+}
+
+/* Main content box */
+.main_box {
+    display: flex;
+    height: calc(100vh - 120px);
+    margin-top: 60px;
+    margin-bottom: 60px;
+    column-gap: 10px;
+}
+
+/* Sidebar */
+.side {
+    background-color: rgb(19, 18, 18);
+    width: 390px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    row-gap: 10px;
+    padding: 12px;
+    border-radius: 10px;
+}
+
+.side-head {
+    display: flex;
+    align-items: center;
+    column-gap: 14px;
+    row-gap: 5px;
+}
+
+.side-head i {
+    font-size: 12px;
+    opacity: 0.5;
+}
+
+.side-h {
+    flex: 1;
+    color: white;
+}
+
+.side-head2 {
+    display: flex;
+    align-items: center;
+}
+
+.side-head2 button {
+    background-color: rgb(19, 18, 18);
+    text-align: center;
+    opacity: 0.6;
+    font-weight: medium;
+}
+
+.side-head2 i {
+    font-size: 16px;
+    opacity: 0.6;
+    margin-left: 3px;
+}
+
+.hh {
+    flex: 1;
+}
+
+.hh i {
+    font-size: 16px;
+    opacity: 0.5;
+}
+
+.playlists {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    overflow-y: scroll;
+    row-gap: 14px;
+    scroll-behavior: smooth;
+}
+
+/* Playlist items */
+.mus1 {
+    display: flex;
+    position: relative;
+    border-radius: 3px;
+}
+
+.mus1play{
+    position: absolute;
+    display: none;
+    bottom:0px;
+    
+}
+.mus1:hover{
+    background-color:rgb(58, 57, 57) ;
+}
+
+
+.mus1:hover .mus1play {
+    display: block;background-color: rgb(22, 21, 21);
+    
+}
+
+
+.mus1 button {
+    margin-right: 13px;
+    margin-top: 4px;
+    margin-left: 4px;
+    margin-bottom: 4px;
+    height: 49px;
+    width: 49px;
+    padding: 12px 12px;
+    border-radius: 4px;
+    background-color: rgb(58, 57, 57);
+}
+
+.mus1 i {
+    opacity: 0.6;
+}
+
+.col1 {
+    display: flex;
+    flex-direction: column;
+    row-gap: 4px;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.col1 h4 {
+    color: white;
+    opacity: 0.9;
+}
+
+.col1 p {
+    font-size: 13.5px;
+    font-weight: 600;
+    color: white;
+    opacity: 0.5;
+}
+
+/* Content area */
+.content {
+    background-color: rgb(19, 18, 18);
+    border-radius: 10px;
+    color: white;
+    flex: 1;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    row-gap: 25px;
+    overflow-y: auto;
+}
+
+/* General buttons */
+button {
+    padding: 10px 16px;
+    border-radius: 24px;
+    font-size: 14px;
+    border: none;
+    font-weight: bold;
+    background-color: rgb(58, 57, 57);
+    transition: opacity 0.3s ease;
+    color: white;
+}
+
+button:hover {
+    cursor: pointer;
+}
+
+/* Cards layout */
+.cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 16px;
+}
+
+.inner_cards {
+    background-color: rgb(19, 18, 18);
+    color: rgb(252, 252, 252);
+    width: 177px;
+    height: 253px;
+    padding: 12px;
+    border-radius: 8px;
+    font-weight: bold;
+    transition: transform 0.2s ease;
+    position: relative;
+}
+
+.inner_cards button i {
+    color: black;
+}
+
+.inner_cards button {
+    position: absolute;
+    border-radius: 40px;
+    height: 42px;
+    width: 42px;
+    right: 10px;
+    padding: 6px 6px;
+    bottom: 50px;
+    background-color: rgb(24, 175, 24);
+    display: none;
+    transition: linear;
+}
+
+.inner_cards:hover button {
+    display: block;
+}
+
+.inner_cards p {
+    opacity: 0.85;
+}
+
+.inner_cards:hover {
+    transform: scale(1.03);
+    cursor: pointer;
+    background-color: rgb(58, 57, 57);
+}
+
+/* Images */
+img {
+    width: 100%;
+    border-radius: 6px;
+}
+
+/* Typography */
+h2 {
+    margin-bottom: 18px;
+}
+
+.card_head {
+    font-weight: 700;
+    font-size: 20px;
+    padding: 4px 0;
+}
+
+.card_info {
+    font-size: 12px;
+    font-weight: 500;
+    width: 150px;
+}
+
+/* Logo */
+.logo {
+    height: 33px;
+    object-fit: contain;
+}
+
+i {
+    color: white;
+    opacity: 1;
+    font-size: 20px;
+}
+
+/* Header buttons */
+.head .button1 {
+    border-radius: 40px;
+    height: 48px;
+    width: 48px;
+    padding: 12px 12px;
+    background-color: rgb(19, 18, 18);
+}
+
+.button1:hover {
+    transform: scale(1.1);
+    background-color: rgb(58, 57, 57);
+}
+
+.input {
+    background-color: rgb(19, 18, 18);
+    width: 490px;
+    height: 48px;
+    padding: 12px 23px 12px 23px;
+    border-radius: 28px;
+    display: flex;
+    align-items: center;
+}
+
+.head input {
+    width: 300px;
+    height: 24px;
+    border-radius: 5px;
+    border: none;
+    background-color: rgb(19, 18, 18);
+    font-size: medium;
+    color: white;
+}
+
+/* Additional buttons */
+.button2 {
+    padding: 10px 16px;
+    border-radius: 24px;
+    font-size: 14px;
+    border: none;
+    font-weight: bold;
+    transition: opacity 0.3s ease;
+}
+
+.button3 {
+    padding: 10px 16px;
+    border-radius: 24px;
+    font-size: 14px;
+    border: none;
+    font-weight: bold;
+    transition: opacity 0.3s ease;
+    text-align: center;
+    background-color: black;
+    color: white;
+    opacity: 0.7;
+}
+
+.button3:hover {
+    transform: scale(1.1);
+    opacity: 1;
+}
+
+.button4 {
+    border-radius: 40px;
+    height: 48px;
+    width: 48px;
+    padding: 12px 12px;
+    background-color: black;
+}
+
+.btn5div {
+    border-radius: 40px;
+    height: 48px;
+    width: 48px;
+    padding-left: 4px;
+    padding-top: 4px;
+    background-color: rgb(58, 57, 57);
+}
+
+.button5 {
+    border-radius: 40px;
+    height: 40px;
+    width: 40px;
+    padding: 6px 6px;
+    background-color: rgb(236, 78, 78);
+}
+
+.button5 p {
+    font-weight: 600;
+    font-size: 18px;
+}

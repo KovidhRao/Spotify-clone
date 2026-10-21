@@ -18,11 +18,11 @@ pipeline {
 
         stage('Deploy Application') {
             steps {
-                echo 'Deploying application container with port mapping 8080:80...'
+                echo 'Deploying application container with port mapping 3000:80...'
                 sh '''
                     docker stop spotify-app || true
                     docker rm spotify-app || true
-                    docker run -d -p 8080:80 --name spotify-app spotify-clone:latest
+                    docker run -d -p 3000:80 --name spotify-app spotify-clone:latest
                 '''
             }
         }
